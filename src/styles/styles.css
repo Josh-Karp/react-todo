@@ -1,0 +1,135 @@
+/* CSS React */
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    font-family: inherit;
+}
+
+/* Variables */
+
+:root {
+    --color-white: #fff;
+    --color-light-white: #eee;
+    --color-black: #000;
+    --color-light-black: #222;
+    --shadow: rgba(0, 0, 0, .4);
+    --color-green-transparent: rgba(21, 219, 149, 0.8);
+    --color-blue-transparent: rgba(8, 15, 91, 0.9);
+    --color-light-blue: #0D19A3;
+    --color-pale-pink: #F4E4C1;
+    --color-brown: #E4C580;
+}
+
+.app {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, var(--color-green-transparent), var(--color-blue-transparent)), url(https://i.pinimg.com/originals/91/b5/cd/91b5cdab51e207263169904b227503b4.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    max-width: 100%;
+    margin: auto;
+    background: var(--color-light-white);
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.toDoList {
+    height: 80vh;
+    width: 25%;
+    box-shadow: 0 2rem 4rem var(--shadow);
+    background-color: var(--color-light-white);
+}
+
+.title {
+    align-self: flex-start;
+    font-size: 3rem;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    height: 15vh;
+    width: auto;
+    margin: 5px;
+    padding: 15px;
+}
+
+.todoInput {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+input {
+    height: 5vh;
+    width: 75%;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid rgb(238, 238, 238);
+}
+
+button {
+    background: #62c7ff;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: "Lato", sans-serif;
+    padding: 10px 25px;
+    margin: 5px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+button:hover {
+    background: var(--color-light-blue);
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+li {
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 10px;
+    border-top: 1px solid var(--color-brown);
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete {
+    height: 3vh;
+    width: 3vh;
+    font-size: 2rem;
+    background: none;
+    color: #333;
+    padding: 0;
+}
+
+.delete:hover {
+    background: var(--color-brown);
+}

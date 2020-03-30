@@ -1,19 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
+import './styles/styles.css';
 
-class App extends Component {
-    constructor(props) {
-        super(props);
+import ToDoList from "./layout/ToDo/ToDo.js";
 
-        this.state = {};
-    }
+const app = () => (
+    <div className="app">
+        <ToDoList />
+    </div>
+);
 
-    render() {
-        return (
-            <div className="wrapper">
-                <p>Let's make a todo list with React!</p>
-            </div>
-        );
-    }
-}
-
-export default App;
+export default app;
