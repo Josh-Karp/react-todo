@@ -2,7 +2,7 @@ import React from "react";
 
 const Button = props => {
     return (
-        <button className="action" onClick={props.handleRemove}>
+        <button className="delete" onClick={props.handleRemove}>
             X
         </button>
     );

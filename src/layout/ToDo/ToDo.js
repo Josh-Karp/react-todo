@@ -34,8 +34,14 @@ class ToDoList extends React.Component {
     };
 
     handleRemove = index => {
-        this.setState({ list: this.state.list.filter(item => index !== item.index) });
-    }
+        const newState = this.state.list.filter(item =>
+            this.state.list.indexOf(item) !== index
+        );
+
+        this.setState({
+            list: newState
+        });
+    };
 
     render() {
         return (
@@ -51,7 +57,10 @@ class ToDoList extends React.Component {
                         placeholder="Add an item"
                     />
 
-                    <List list={this.state.list} />
+                    <List
+                        list={this.state.list}
+                        handleRemove={this.handleRemove}
+                    />
                 </div>
             </main>
         );

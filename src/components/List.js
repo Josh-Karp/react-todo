@@ -8,7 +8,7 @@ const List = props => {
                 <ListItem
                     key={index}
                     item={item.name}
-                    handleRemove={props.handleRemove}
+                    handleRemove={() => props.handleRemove(index)}
                 />
             ))}
         </ul>
